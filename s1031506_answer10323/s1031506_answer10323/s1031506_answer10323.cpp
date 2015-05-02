@@ -29,14 +29,10 @@ int main()
 
 	for (int i = 0; i < counter; i++)
 	{
-		if (f[i] < 10000)
-		{
-			cout << "Underflow!" << endl;
-		}
-		else if (f[i] > 6227020800)
-		{
+		if (p[i]>16)
 			cout << "Overflow!" << endl;
-		}
+		else if (f[i] < 10000)
+			cout << "Underflow!" << endl;
 		else
 			cout << f[i] << endl;
 	}
