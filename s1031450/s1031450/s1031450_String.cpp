@@ -1,7 +1,7 @@
 #include<iostream>
 #include<string>
 #include "s1031450_String.h"
-using namespace std;
+using namespace std; 
 
 
 ostream &operator<<(ostream& output, const String& str)

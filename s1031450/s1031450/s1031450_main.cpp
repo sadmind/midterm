@@ -3,7 +3,7 @@
 #include<string>
 #include "s1031450_String.h" // include definition of class String
 using namespace std;
-int main()
+int main() 
 {
 	//To be or not to be, that is the question;
 	char * str1 = "to be "; //It's ended with '\0' automatically

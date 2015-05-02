@@ -11,7 +11,7 @@ class String
 
 	//friend istream& operator>> (istream& input, string& str); //BOUNS 10pts
 	// Extracts a string from the input stream is, storing the sequence in str, 
-	// which is overwritten (the previous value of str is replaced).
+	 // which is overwritten (the previous value of str is replaced).
 	// This function overloads operator>> to behave as described 
 	// in istream::operator>> for c-strings, but applied to string objects.
 	// *Notice that the istream extraction operations use whitespaces as separators; 
