@@ -13,14 +13,14 @@ String::String()
 	size = 0;
 	capacity = 0;
 	sPtr = "";
-}// Constructs an empty string, with a length of zero characters. ***default capacity = 10
+}
 
 String::String(const String &str)
 {
 	size = str.size;
 	capacity = str.capacity;
 	sPtr = str.sPtr;
-}// Constructs a copy of "str". (copy constructor)
+}
 
 String::String(const String& str, size_t pos, size_t len = npos)
 {
@@ -100,7 +100,9 @@ void String::shrink_to_fit()
 
 void String::clear()
 {
-
+	size = 0;
+	capacity = 0;
+	sPtr = "";
 }
 // Erases the contents of the string, which becomes an empty string 
 // (with a length of 0 characters, the Capacity is not affected).
