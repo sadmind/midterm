@@ -71,6 +71,11 @@ void String::push_back(char c)
 
 }
 
+void String::clear()
+{
+	delete[]sPtr;
+}
+
 
 
 void String::pop_back()
