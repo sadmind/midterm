@@ -2,7 +2,7 @@
 #define PG2String_H
 using namespace std;
 
-class String 
+class String
 {
 	friend ostream &operator<<(ostream& output, const String& str);
 	// Inserts the sequence of characters that conforms value of str into os.
