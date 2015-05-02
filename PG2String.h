@@ -1,4 +1,4 @@
-#include "PG2Vector.h"
+
 #ifndef PG2String_H
 #define PG2String_H
 using namespace std;
@@ -6,6 +6,7 @@ using namespace std;
 class String 
 {
 	friend ostream &operator<<(ostream& output, const String& str);
+	friend istream &operator>>(ostream& input, const String& str);
 	// Inserts the sequence of characters that conforms value of str into os.
 	// This function overloads operator<< to behave as described 
 	// in ostream::operator<< for c-strings, but applied to string objects.
@@ -142,9 +143,9 @@ public:
 	// Note: The first character in a string is denoted by a value of 0 (not 1).
 	// size_t is an unsigned integral type (the same as member type string::size_type).
 
-	String operator+ (const String& lhs, const String& rhs);
-	String operator+ (const String& lhs, const char*   rhs);
-	String operator+ (const char*   lhs, const String& rhs);
+	String operator+ (const String& rhs);
+	String operator+ ( const char*   rhs);
+	
 	// Returns a newly constructed string object with its value 
 	// being the *concatenation* of the characters in lhs followed by those of rhs.
 	// Note: If of type char*, it shall point to a null-terminated character sequence.
@@ -156,7 +157,7 @@ public:
 	bool operator==(const String &str); //< (equal to) true: two identical String
 	bool operator!=(const String &str); //< (not equal to)
 	//Compares the value of the string object to the sequence of characters specified by its arguments.
-
+	static const size_t CINLIM = 80;
 private:
 	size_t size; // the number of elements in the string
 	// This is the number of actual objects held in the string, which is not necessarily equal to its storage capacity.
@@ -164,6 +165,7 @@ private:
 	// This capacity is not necessarily equal to the string size. It can be equal or greater,
 	// with the extra space allowing to accommodate for growth without the need to reallocate on each insertion.
 	char *sPtr; // points to a dynamically allocated array which is used to store the elements of the string
+	//cin input limit
 }; // end class String
 
 #endif

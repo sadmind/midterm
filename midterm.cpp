@@ -17,29 +17,29 @@ int main()
 	cout << "B = X = str2: " << B << " = " << X << endl;
 	cout << "C = str3: " << C << " = " << str3 << endl;
 
-	String D = A + C;
-	cout << "D = A + C: " << D << endl;
-	D = A + str3;
-	cout << "D = A + str3: " << D << endl;
-	D = str1 + C;
-	cout << "D = str1 + C: " << D << endl;
+	//String D = A + C;
+	//cout << "D = A + C: " << D << endl;
+	//D = A + str3;
+	//cout << "D = A + str3: " << D << endl;
+	////D = str1 + C;
+	////cout << "D = str1 + C: " << D << endl;
 
-	cout << "-------------------------------" << endl;
+	//cout << "-------------------------------" << endl;
 
-	cout << "D push ',': ";
-	D.push_back(',');
-	cout << D << endl;
-	cout << "D pop_back: ";
-	D.pop_back();
-	cout << D << endl;
-	
+	//cout << "D push ',': ";
+	//D.push_back(',');
+	//cout << D << endl;
+	//cout << "D pop_back: ";
+	//D.pop_back();
+	//cout << D << endl;
+	//
 	cout << "-------------------------------" << endl;
 	
-	String STR = D;
+	/*String STR = D;*/
 	String E = ", that is cool question";
 	String F = ", that is (the )question";
 	String G = "the ";
-	STR.append(F);
+	/*STR.append(F);
 	cout << "STR = D append F: " << STR << endl;
 	STR.erase(28,6);
 	cout << "STR erase 28-34: " << STR << endl;
@@ -48,24 +48,24 @@ int main()
 	STR.erase(28,4);
 	cout << "STR erase 28-34: " << STR << endl;
 	STR.insert(28, E, 10, 5); 
-	cout << "STR insert E (10-14): " << STR << endl;
+	cout << "STR insert E (10-14): " << STR << endl;*/
 	
 	cout << "-------------------------------" << endl;
 
-	String STR2 = E.substr(10,4);
-	cout << "find \"cool\" in the STR: " << STR.find(STR2) << endl;
-	STR2 = "cXXL";
-	cout << "Let STR2 = cXXL: " << STR2 << endl;
-	cout << "find \"cXXL\" in the STR: " << STR.find(STR2) << endl;
-	cout << "find first \"cXXL\" in the STR: " << STR.find_first_of(STR2) << endl;
+	//String STR2 = E.substr(10,4);
+	//cout << "find \"cool\" in the STR: " << STR.find(STR2) << endl;
+	//STR2 = "cXXL";
+	//cout << "Let STR2 = cXXL: " << STR2 << endl;
+	//cout << "find \"cXXL\" in the STR: " << STR.find(STR2) << endl;
+	//cout << "find first \"cXXL\" in the STR: " << STR.find_first_of(STR2) << endl;
 
-	cout << "print the first and last char of STR: " << STR.front() << " : " << STR.back() << endl;
+	//cout << "print the first and last char of STR: " << STR.front() << " : " << STR.back() << endl;
 	
 	cout << "-------------------------------" << endl;
 
-	cout << "Rebuild STR2 word by word: ";
+	/*cout << "Rebuild STR2 word by word: ";
 	String STR3 = "";
-	for(int i = 0; i < STR2.length(); i++)
+	for(int i = 0; i < STR2.getSize(); i++)
 		STR3.push_back(STR2[i]);
 	cout << STR3 << endl;
 	
@@ -96,7 +96,7 @@ int main()
 	
 	STR3.resize(20, 'c');
 	cout << "STR3 resize to 20 = " << STR3 << endl;
-	cout << " [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;
+	cout << " [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;*/
 		
 	system("pause");
 	return 0;
