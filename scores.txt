@@ -1,0 +1,28 @@
+10pt constructors / ~constructor
+4pt begin/end
+4pt front/back
+4pt push_back/pop_back
+
+4pt getSize / resize*2
+6pt getCapacity / reserve / shrink_to_fit
+
+---32pt
+
+10pt append
+10pt substr
+10pt insert
+5pt erase
+10pt find & find_first_of
+
+---45pt
+
+4pt operator[]
+6pt operator+
+4pt operator=
+4pt operator== & !=
+4pt operator <<
++10pt operator >>
+
+---22pt + 10pt(BONUS)
+
+uva 10+10
