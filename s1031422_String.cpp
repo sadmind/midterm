@@ -11,7 +11,7 @@ ostream &operator<<(ostream& output, const String& str)
 }
 istream& operator>> (istream& input, string& str)
 {
-	char in;
+	char in[];
 	input >> in;
 	str=in;
 	return input;
@@ -252,13 +252,13 @@ String& String::erase(size_t subpos, size_t sublen)
 	return *this;
 }
 
-size_t String::find(const String &str, size_t pos )const 
+/*size_t String::find(const String &str, size_t pos )const 
 {
 
 }
 
 size_t String::find_first_of(const String str, size_t pos )const {}
-
+*/
 char& String::operator[] (size_t pos)
 {
 	return sPtr[pos];
