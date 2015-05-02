@@ -1,3 +1,4 @@
+/*
 #ifndef PG2String_H
 #define PG2String_H
 using namespace std;
@@ -18,7 +19,7 @@ class String
 	// Therefore, this operation will only extract what can be considered a word from the stream.
 
 public:
-/*	static const size_t npos = -1;
+	static const size_t npos = -1;
 	//size_t is an unsigned integral type.
 	//This constant is defined with a value of -1, which because size_t is an unsigned integral type, 
 	//it is the largest possible representable value for this type.
@@ -155,7 +156,7 @@ public:
 	bool operator==(const String &str); //< (equal to) true: two identical String
 	bool operator!=(const String &str); //< (not equal to)
 	//Compares the value of the string object to the sequence of characters specified by its arguments.
-	*/
+	
 private:
 	size_t size; // the number of elements in the string
 	// This is the number of actual objects held in the string, which is not necessarily equal to its storage capacity.
@@ -165,4 +166,4 @@ private:
 	char *sPtr; // points to a dynamically allocated array which is used to store the elements of the string
 }; // end class String
 
-#endif
+#endif*/

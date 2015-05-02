@@ -1,4 +1,5 @@
 // PG2String test program.
+/*
 #include <iostream>
 #include "PG2String.h" // include definition of class String
 using namespace std;
@@ -10,7 +11,7 @@ int main()
 	char * str2 = "the ";
 	char * str3 = "or not to be";
 	char * str_tester = "Ha";
-/*	String A(str1);
+	String A(str1);
 	String X(str2);
 	String B = X;
 	String C = "or not to be";
@@ -98,7 +99,7 @@ int main()
 	STR3.resize(20, 'c');
 	cout << "STR3 resize to 20 = " << STR3 << endl;
 	cout << " [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;
-		*/
+		
 	system("pause");
 	return 0;
-}
+}*/
