@@ -21,10 +21,7 @@ String::String(const String &str)
 		f[i] = str[i];
 }
 
-String::String(const String& str, size_t pos, size_t len = npos)
-{
 
-}
 
 String::String(const char *s)
 {
@@ -73,9 +70,7 @@ size_t String::getCapacity() const
 	return a;
 }
 
-void String::reserve(size_t n = 0)
-{
-}
+
 
 void String::shrink_to_fit()
 {
@@ -192,5 +187,9 @@ bool String::operator!=(const String &str)
 
 ostream &operator<<(ostream& output, const String& str)
 {
-	
+	for (int i = 0; i <= sizeof(str); i++)
+	{
+		output << str[i];
+	}
+	return output;
 }
