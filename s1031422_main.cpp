@@ -51,8 +51,8 @@ int main()
 	//cout << "STR insert E (10-14): " << STR << endl;
 	
 	cout << "-------------------------------" << endl;
-	
-	String STR2 = E.substr(10,4);
+	/*
+	//String STR2 = E.substr(10,4);
 //	cout << "find \"cool\" in the STR: " << STR.find(STR2) << endl;
 	STR2 = "cXXL";
 	cout << "Let STR2 = cXXL: " << STR2 << endl;
@@ -97,7 +97,7 @@ int main()
 	STR3.resize(20, 'c');
 	cout << "STR3 resize to 20 = " << STR3 << endl;
 	cout << " [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;
-		
+		*/
 	system("pause");
 	return 0;
 }
