@@ -16,13 +16,13 @@ int main()
 	cout << "A = str1: " << A << endl;
 	cout << "B = X = str2: " << B << " = " << X << endl;
 	cout << "C = str3: " << C << " = " << str3 << endl;
-
+	
 	String D = A + C;
 	cout << "D = A + C: " << D << endl;
 	D = A + str3;
 	cout << "D = A + str3: " << D << endl;
-	D = str1 + C;
-	cout << "D = str1 + C: " << D << endl;
+	//D = str1 + C;
+	//cout << "D = str1 + C: " << D << endl;
 
 	cout << "-------------------------------" << endl;
 
@@ -65,7 +65,7 @@ int main()
 
 	cout << "Rebuild STR2 word by word: ";
 	String STR3 = "";
-	for(int i = 0; i < STR2.length(); i++)
+	for(int i = 0; i < STR2.size(); i++)
 		STR3.push_back(STR2[i]);
 	cout << STR3 << endl;
 	
@@ -97,7 +97,7 @@ int main()
 	STR3.resize(20, 'c');
 	cout << "STR3 resize to 20 = " << STR3 << endl;
 	cout << " [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;
-		
+	
 	system("pause");
 	return 0;
 }

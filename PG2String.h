@@ -1,4 +1,3 @@
-#include "PG2Vector.h"
 #ifndef PG2String_H
 #define PG2String_H
 using namespace std;
@@ -60,14 +59,14 @@ public:
 
 	void resize( size_t n, char c ); 
 	// Similar to above one. The new elements are initialized as copies of c.
-
+	/*
 	size_t getCapacity() const; 
 	// NOTE: default capacity = 10
 	// Returns the size of the storage space currently allocated for the string,
 	// expressed in terms of elements.
 	// *This capacity is not necessarily equal to the string length. It can be equal or greater, 
 	// with the extra space allowing the object to optimize its operations when new characters are added to the string.
-
+	*/
 	void reserve( size_t n = 0 ); // Requests that the string capacity be enough to contain n characters.
 	// If n is greater than the current string capacity,
 	// the function causes the container to reallocate its storage increasing its capacity to n.
@@ -85,7 +84,7 @@ public:
 	char& front(); 
 	// *Returns a reference to the first character of the string.
 	// This function shall not be called on empty strings.
-
+/*	
 	char& back(); 
 	// *Returns a reference to the last character of the string.
 	// This function shall not be called on empty strings.
@@ -142,13 +141,12 @@ public:
 	// Note: The first character in a string is denoted by a value of 0 (not 1).
 	// size_t is an unsigned integral type (the same as member type string::size_type).
 
-	String operator+ (const String& lhs, const String& rhs);
-	String operator+ (const String& lhs, const char*   rhs);
-	String operator+ (const char*   lhs, const String& rhs);
+	String operator+ (const String& rhs);
+	String operator+ (const char*   rhs);
 	// Returns a newly constructed string object with its value 
 	// being the *concatenation* of the characters in lhs followed by those of rhs.
 	// Note: If of type char*, it shall point to a null-terminated character sequence.
-
+*/
 	String& operator= (const String& str);
 	String& operator= (const char* s);
 	//Assigns a new value to the string, replacing its current contents.

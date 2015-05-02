@@ -142,7 +142,7 @@ char& String::back(){
 	char ref = sPtr[size - 1];
 	return ref;
 }
-
+/*
 void String::push_back(char c){}
 // Appends character c to the end of the string, increasing its length by one.
 // *Return the reference of itself
@@ -204,7 +204,7 @@ String String::operator+ (const String& rhs){}
 // Returns a newly constructed string object with its value 
 // being the *concatenation* of the characters in lhs followed by those of rhs.
 // Note: If of type char*, it shall point to a null-terminated character sequence.
-
+*/
 String& String::operator= (const String& str){
 	for (int i = 0; i < capacity; i++)
 		sPtr[i] = str.sPtr[i];
