@@ -127,12 +127,12 @@ public:
 	// (or until the end of the string, if either the content is too short or if len is string::npos.)
 	// *Return the reference of itself
 
-	size_t find( const String &str, size_t pos = 0 ) const;
+	//size_t find( const String &str, size_t pos = 0 ) const;
 	// Searches the portion of the string value that begins at the character position pos until the end of the string
 	// for the first occurrence of the string str.
 	// Return Value: The position of the first character of the first match. If no matches were found, the function returns String::npos.
 
-	size_t find_first_of( const String str, size_t pos = 0 ) const;
+	//size_t find_first_of( const String str, size_t pos = 0 ) const;
 	// Searches the portion of the string value that begins at the character position "pos" until the end of the string
 	// for the first character that matches *any* of the characters of the string str.
 	// Return Value: The position of the first character that matches. If no matches are found, the function returns String::npos.

@@ -53,11 +53,11 @@ int main()
 	cout << "-------------------------------" << endl;
 	
 	String STR2 = E.substr(10,4);
-	cout << "find \"cool\" in the STR: " << STR.find(STR2) << endl;
+//	cout << "find \"cool\" in the STR: " << STR.find(STR2) << endl;
 	STR2 = "cXXL";
 	cout << "Let STR2 = cXXL: " << STR2 << endl;
-	cout << "find \"cXXL\" in the STR: " << STR.find(STR2) << endl;
-	cout << "find first \"cXXL\" in the STR: " << STR.find_first_of(STR2) << endl;
+	//cout << "find \"cXXL\" in the STR: " << STR.find(STR2) << endl;
+	//cout << "find first \"cXXL\" in the STR: " << STR.find_first_of(STR2) << endl;
 
 	cout << "print the first and last char of STR: " << STR.front() << " : " << STR.back() << endl;
 	
