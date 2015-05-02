@@ -61,10 +61,11 @@ int main()
 	//cout << "find first \"cXXL\" in the STR: " << STR.find_first_of(STR2) << endl;
 
 	//cout << "print the first and last char of STR: " << STR.front() << " : " << STR.back() << endl;
-	/*
+	
 	cout << "-------------------------------" << endl;
 
 	cout << "Rebuild STR2 word by word: ";
+	/*
 	String STR3 = "";
 	for(int i = 0; i < STR2.getSize(); i++)
 		STR3.push_back(STR2[i]);
