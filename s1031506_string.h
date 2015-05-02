@@ -1,6 +1,7 @@
 #ifndef PG2String_H
 #define PG2String_H
 using namespace std;
+#include <iostream>
 
 class String
 {
@@ -141,15 +142,14 @@ public:
 	// Note: The first character in a string is denoted by a value of 0 (not 1).
 	// size_t is an unsigned integral type (the same as member type string::size_type).
 
-	String operator+ (const String& lhs, const String& rhs);
-	String operator+ (const String& lhs, const char*   rhs);
-	String operator+ (const char*   lhs, const String& rhs);
+	String operator+ (const String& rhs);
+	String operator+ (const char*   rhs);
 	// Returns a newly constructed string object with its value 
 	// being the *concatenation* of the characters in lhs followed by those of rhs.
 	// Note: If of type char*, it shall point to a null-terminated character sequence.
 
 	String& operator= (const String& str);
-	String& operator= (const char* s);
+	String& operator= (const char* s);	
 	//Assigns a new value to the string, replacing its current contents.
 
 	bool operator==(const String &str); //< (equal to) true: two identical String

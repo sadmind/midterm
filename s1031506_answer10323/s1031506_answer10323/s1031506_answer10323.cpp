@@ -1,28 +1,45 @@
 #include <iostream>
-
+#include <fstream>
 using namespace std;
 
 int main()
 {
-	int f = 1;
-	int temp = 0;
-	int time;
-	cout << "Please input the number: " << endl
-		<< "? ";
-	cin >> time;
-	for (int i = 1; i < time+1; i++)
+	long long n;
+	int t;
+	int p[10] = {};
+	int counter = 0;
+	ifstream fin("data_uva10323.txt");
+
+	while (fin >> t)
 	{
-		temp = i * f;
-		f = temp;
+		p[counter] = t;
+		counter++;
 	}
 
-	if (f < 10000)
-		cout << "Underflow!" << endl;
-	else if (f > 6227020800)
-		cout << "Overflow!" << endl;
-	else
-		cout << f << endl;
+	int f[10] = {1,1,1,1,1,1,1,1,1,1};
+	int temp = 0;
+	for (int j = 0; j < counter; j++)
+	{
+		for (int i = 1; i < p[j]+1 ; i++)
+		{
+			temp = i * f[j];
+			f[j] = temp;
+		}
+	}
 
+	for (int i = 0; i < counter; i++)
+	{
+		if (f[i] < 10000)
+		{
+			cout << "Underflow!" << endl;
+		}
+		else if (f[i] > 6227020800)
+		{
+			cout << "Overflow!" << endl;
+		}
+		else
+			cout << f[i] << endl;
+	}
 	system("pause");
 	return 0;
 }

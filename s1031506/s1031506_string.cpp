@@ -3,20 +3,30 @@
 #include <iostream>
 using namespace std;
 
+ostream &operator<<(ostream& output, const String& str)
+{
+	output << str;
+	return output;
+}
 String::String()
 {
-
+	size = 0;
+	capacity = 0;
+	sPtr = "";
 }// Constructs an empty string, with a length of zero characters. ***default capacity = 10
 
 String::String(const String &str)
 {
-
+	size = str.size;
+	capacity = str.capacity;
+	sPtr = str.sPtr;
 }// Constructs a copy of "str". (copy constructor)
 
 String::String(const String& str, size_t pos, size_t len = npos)
 {
 
-}// (substring constructor)
+}
+// (substring constructor)
 // Copies the portion of str that begins at the character position "pos" and spans "len" characters 
 // (or until the end of str, if either str is too short or if len is string::npos).
 
@@ -111,69 +121,121 @@ char&Stingback();
 // *Returns a reference to the last character of the string.
 // This function shall not be called on empty strings.
 
-void push_back(char c);
+void String::push_back(char c)
+{
+
+}
 // Appends character c to the end of the string, increasing its length by one.
 // *Return the reference of itself
 
-void pop_back();
+void String::pop_back()
+{
+
+}
 // Erases the last character of the string, effectively reducing its size by one. 
 // (the string capacity is not affected)
 // *Return the reference of itself
 
-String& append(const String &str);
+String& append(const String &str)
+{
+
+}
 // Appends a str on the tail of current String. 
 // *Return the reference of itself
 
-String& substr(size_t pos = 0, size_t len = npos) const;
+String& String::substr(size_t pos = 0, size_t len = npos) const
+{
+
+}
 // The substring is the portion of the object that starts at character position pos and spans len characters 
 // (or until the end of the string, whichever comes first).
 // *Returns a newly constructed string object with its value initialized to a copy of a substring of this object.
 
-String& insert(size_t pos, const String &str);
+String& insert(size_t pos, const String &str)
+{
+
+}
 // Inserts a copy of a str at "pos".
 // example: str = "to be question", str2 = "the "
 // str.insert(6,str2); // = to be (the )question
 // *Return the reference of itself
 
-String& insert(size_t pos, const String &str, size_t subpos, size_t sublen);
+String& insert(size_t pos, const String &str, size_t subpos, size_t sublen)
+{ 
+
+}
 // Inserts a copy of a substring of str at "pos". The substring is the portion of "str" that
 // begins at the character position subpos and spans sublen characters (or until the end of str).
 // example: str = "to be the question", str3 = "or not to be"
 // str.insert(6,str3,3,4); // to be (not )the question
 // *Return the reference of itself
 
-String& erase(size_t subpos, size_t sublen);
+String& erase(size_t subpos, size_t sublen)
+{
+
+}
 // Erases the portion of the string value that begins at the character position pos and spans len characters 
 // (or until the end of the string, if either the content is too short or if len is string::npos.)
 // *Return the reference of itself
 
-size_t find(const String &str, size_t pos = 0) const;
+size_t String::find(const String &str, size_t pos = 0) const
+{
+
+}
 // Searches the portion of the string value that begins at the character position pos until the end of the string
 // for the first occurrence of the string str.
 // Return Value: The position of the first character of the first match. If no matches were found, the function returns String::npos.
 
-size_t find_first_of(const String str, size_t pos = 0) const;
+size_t String::find_first_of(const String str, size_t pos = 0) const
+{
+
+}
 // Searches the portion of the string value that begins at the character position "pos" until the end of the string
 // for the first character that matches *any* of the characters of the string str.
 // Return Value: The position of the first character that matches. If no matches are found, the function returns String::npos.
 
-char& operator[] (size_t pos); //Get character of string
-const char& operator[] (size_t pos) const;
+char& String::operator[] (size_t pos)
+{
+
+}//Get character of string
+const char& String::operator[] (size_t pos) const
+{
+
+}
 // Value with the position of a character within the string.
 // Note: The first character in a string is denoted by a value of 0 (not 1).
 // size_t is an unsigned integral type (the same as member type string::size_type).
 
 String operator+ (const String& lhs, const String& rhs);
 String operator+ (const String& lhs, const char*   rhs);
-String operator+ (const char*   lhs, const String& rhs);
+
 // Returns a newly constructed string object with its value 
 // being the *concatenation* of the characters in lhs followed by those of rhs.
 // Note: If of type char*, it shall point to a null-terminated character sequence.
 
-String& operator= (const String& str);
-String& operator= (const char* s);
+String& String::operator= (const String& str)
+{
+	string assign;
+	assign.size = str.size;
+	assign.capacity = str.capacity;
+	assign = str.sPtr;
+	return assign;
+}
+String& String::operator= (const char* s)
+{
+
+}
 //Assigns a new value to the string, replacing its current contents.
 
-bool operator==(const String &str); //< (equal to) true: two identical String
-bool operator!=(const String &str); //< (not equal to)
+bool String::operator==(const String &str)
+{
+	if (size == str.size && capacity == str.capacity && sPtr == str.sPtr)
+		return true;
+	else
+		return false;
+}//< (equal to) true: two identical String
+bool String::operator!=(const String &str)
+{
+	return !(*this == str);
+}//< (not equal to)
 //Compares the value of the string object to the sequence of characters specified by its arguments.
