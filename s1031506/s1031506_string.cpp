@@ -5,7 +5,7 @@ using namespace std;
 
 ostream &operator<<(ostream& output, const String& str)
 {
-	output << str;
+	output << str.sPtr;
 	return output;
 }
 String::String()
