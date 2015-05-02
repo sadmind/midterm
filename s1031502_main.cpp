@@ -16,7 +16,7 @@ int main()
 	cout << "A = str1: " << A << endl;
 	cout << "B = X = str2: " << B << " = " << X << endl;
 	cout << "C = str3: " << C << " = " << str3 << endl;
-	
+
 	String D = A + C;
 	cout << "D = A + C: " << D << endl;
 	D = A + str3;
@@ -26,7 +26,7 @@ int main()
 
 	cout << "-------------------------------" << endl;
 
-	
+
 	cout << "D push ',': ";
 	D.push_back(',');
 	cout << D << endl;
@@ -36,7 +36,7 @@ int main()
 
 	cout << "-------------------------------" << endl;
 
-	
+
 	String STR = D;
 	String E = ", that is cool question";
 	String F = ", that is (the )question";
@@ -67,7 +67,7 @@ int main()
 
 	cout << "-------------------------------" << endl;
 
-	
+
 	cout << "Rebuild STR2 word by word: ";
 	String STR3 = "";
 	for (int i = 0; i < STR2.getSize(); i++)
@@ -86,16 +86,16 @@ int main()
 	cout << "STR3 clear all char = " << STR3 << endl;
 
 	cout << "-------------------------------" << endl;
-	
+
 	cout << "Current STR3 [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;
 
 	cout << "STR3 append STR2 = " << STR3.append(STR2);
 	cout << " [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;
-	
+
 	STR3.reserve(20);
 	cout << "STR3 reserve to 20 = " << STR3 << endl;
 	cout << " [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;
-	
+
 	STR3.shrink_to_fit();
 	cout << "STR3 shrink_to_fit = " << STR3 << endl;
 	cout << " [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;
@@ -103,7 +103,7 @@ int main()
 	STR3.resize(20, 'c');
 	cout << "STR3 resize to 20 = " << STR3 << endl;
 	cout << " [size=" << STR3.getSize() << ", capacity=" << STR3.getCapacity() << "]" << endl;
-	
+
 	system("pause");
 	return 0;
 }

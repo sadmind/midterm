@@ -141,7 +141,7 @@ public:
 	// Note: The first character in a string is denoted by a value of 0 (not 1).
 	// size_t is an unsigned integral type (the same as member type string::size_type).
 
-	
+
 	String operator+ (const String& rhs);
 	String operator+ (const char*   rhs);
 	// Returns a newly constructed string object with its value 

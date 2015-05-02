@@ -30,7 +30,7 @@ String::String(const String &str)
 
 String::String(const String& str, size_t pos, size_t len)
 {
-	if (pos+len<=size && str.size!=0)
+	if (pos + len <= size && str.size != 0)
 	{
 		for (size_t i = 0; i < len; i++)
 		{
@@ -78,7 +78,7 @@ void String::resize(size_t n)
 			temp[i] = sPtr[i];
 		}
 		delete[] sPtr;
-		
+
 		sPtr = new char[n];
 		for (size_t i = 0; i < n; i++)
 		{
@@ -230,13 +230,13 @@ String& String::append(const String &str)
 {
 	char* temp = new char[size];//¼È¦s
 	size_t A = size;
-	for (size_t i = 0; i < size;i++)
+	for (size_t i = 0; i < size; i++)
 	{
 		temp[i] = sPtr[i];
 	}
 
 	size += str.size;
-	delete [] sPtr;
+	delete[] sPtr;
 
 	sPtr = new char[size];
 	for (size_t i = 0; i < A; i++)
@@ -307,9 +307,9 @@ String& String::insert(size_t pos, const String &str, size_t subpos, size_t subl
 	for (size_t i = 0; i < pos; i++)
 		sPtr[i] = temp[i];
 	for (size_t i = 0; i < sublen; i++)
-		sPtr[pos + i] = str.sPtr[subpos+i];
+		sPtr[pos + i] = str.sPtr[subpos + i];
 	for (size_t i = 0; i < temp2size; i++)
-		sPtr[pos + sublen+ i] = temp2[i];
+		sPtr[pos + sublen + i] = temp2[i];
 
 	return *this;
 }
@@ -321,7 +321,7 @@ String& String::erase(size_t subpos, size_t sublen)
 		int i = 0;
 		for (size_t a = subpos; a < size; a++)
 		{
-			sPtr[subpos+i] = sPtr[i+sublen + subpos];
+			sPtr[subpos + i] = sPtr[i + sublen + subpos];
 			i++;
 		}
 		size -= sublen;
@@ -337,7 +337,7 @@ String& String::erase(size_t subpos, size_t sublen)
 
 size_t String::find(const String &str, size_t pos) const
 {
-	bool check=true;
+	bool check = true;
 	if (pos <= str.size)
 	{
 		for (size_t i = pos; i < size - str.size; i++)
@@ -348,13 +348,13 @@ size_t String::find(const String &str, size_t pos) const
 					check = false;
 			}
 			if (check == false)
-				return String::npos;
+				return -1;
 			else
 				return i;
 		}
 	}
 	else
-		return String::npos;
+		return -1;
 }
 
 size_t String::find_first_of(const String str, size_t pos) const
@@ -369,11 +369,11 @@ size_t String::find_first_of(const String str, size_t pos) const
 					return i;
 			}
 		}
-		return String::npos;
+		return -1;
 
 	}
 	else
-		return String::npos;
+		return -1;
 }
 
 char& String::operator[] (size_t pos)
