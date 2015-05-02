@@ -11,7 +11,7 @@ ostream &operator<<(ostream& output, const String& str)
 }
 istream& operator>> (istream& input, string& str)
 {
-	char in[];
+	char in;
 	input >> in;
 	str=in;
 	return input;
