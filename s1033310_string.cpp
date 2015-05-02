@@ -301,7 +301,6 @@ String& String::operator=(const String& str)
 String& String::operator=(const char* s)
 {
 	String tmp(s);
-	cout << tmp << endl;
 	*this = tmp;
 	return *this;
 }
