@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 #include "s1031450_String.h"
 using namespace std;
 
@@ -30,7 +31,7 @@ istream &operator>>(istream& input, string& str)
 	//This constant is defined with a value of -1, which because size_t is an unsigned integral type, 
 	//it is the largest possible representable value for this type.
 
-	void string::String()
+	string::String()
 	{
 		
 	}// Constructs an empty string, with a length of zero characters. ***default capacity = 10
@@ -55,7 +56,10 @@ istream &operator>>(istream& input, string& str)
 	// The past-the-end character is a theoretical character that would follow the last character in the string.
 	// It shall not be dereferenced.
 
-	size_t getSize() const; // Returns the number of characters in the string.
+	size_t getSize() const
+	{
+
+	}// Returns the number of characters in the string.
 
 	void resize(size_t n);
 	// Resizes the string to a length of n characters.
@@ -151,9 +155,8 @@ istream &operator>>(istream& input, string& str)
 	// Note: The first character in a string is denoted by a value of 0 (not 1).
 	// size_t is an unsigned integral type (the same as member type string::size_type).
 
-	String operator+ (const String& lhs, const String& rhs);
-	String operator+ (const String& lhs, const char*   rhs);
-	String operator+ (const char*   lhs, const String& rhs);
+	String operator+ (const String& rhs);
+	String operator+ (const char*   rhs);
 	// Returns a newly constructed string object with its value 
 	// being the *concatenation* of the characters in lhs followed by those of rhs.
 	// Note: If of type char*, it shall point to a null-terminated character sequence.

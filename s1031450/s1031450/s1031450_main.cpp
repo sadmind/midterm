@@ -1,5 +1,6 @@
 // PG2String test program.
 #include <iostream>
+#include<string>
 #include "s1031450_String.h" // include definition of class String
 using namespace std;
 int main()
@@ -21,8 +22,8 @@ int main()
 	cout << "D = A + C: " << D << endl;
 	D = A + str3;
 	cout << "D = A + str3: " << D << endl;
-	D = str1 + C;
-	cout << "D = str1 + C: " << D << endl;
+	//D = str1 + C;
+	//cout << "D = str1 + C: " << D << endl;
 
 	cout << "-------------------------------" << endl;
 
@@ -65,7 +66,7 @@ int main()
 
 	cout << "Rebuild STR2 word by word: ";
 	String STR3 = "";
-	for(int i = 0; i < STR2.length(); i++)
+	for(int i = 0; i < STR2.getSize(); i++)
 		STR3.push_back(STR2[i]);
 	cout << STR3 << endl;
 	
