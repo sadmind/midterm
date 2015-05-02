@@ -1,4 +1,4 @@
-.opensdf
+*.opensdf
 *.out
 *.o
 *.sdf
