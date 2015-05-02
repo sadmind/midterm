@@ -1,6 +1,5 @@
-#include "PG2Vector.h"
-#ifndef PG2String_H
-#define PG2String_H
+#ifndef S1033324_STRING_H
+#define S1033324_STRING_H
 using namespace std;
 
 class String 

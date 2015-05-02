@@ -1,6 +1,6 @@
 // PG2String test program.
 #include <iostream>
-#include "PG2String.h" // include definition of class String
+#include "s1033324_String.h" // include definition of class String
 using namespace std;
 int main()
 {
