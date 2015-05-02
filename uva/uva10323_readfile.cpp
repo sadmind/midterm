@@ -12,3 +12,9 @@ int main(){
 	system("pause");
 	return 0;
 }
+if (factorial(t)>6227020800)
+cout << t << " Overflow! " << endl;
+if (factorial(t) < 10000)
+	cout << t << endl << factorial(t) << "Underflow!" << endl;
+else
+cout << t << endl << factorial(t) << endl;
