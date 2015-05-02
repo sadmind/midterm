@@ -20,7 +20,9 @@ String::String()
 {
 	size = 0;
 	capacity = 10;
-	sPtr = 0;
+	sPtr = new char [10];
+	for (int i = 0; i < 10; i++)
+		sPtr[i] = '\0';
 }
 String::String(const String &str)
 {
