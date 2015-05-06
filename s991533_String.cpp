@@ -282,12 +282,12 @@ size_t String::find_first_of(const String str, size_t pos) const
 
 char& String::operator [] (size_t pos)
 {
-    return sPtr[pos];
+    return pos < size ? sPtr[pos] : sPtr[0];
 }
 
 const char& String::operator [] (size_t pos) const
 {
-    return sPtr[pos];
+    return pos < size ? sPtr[pos] : sPtr[0];
 }
 
 String String::operator + (const String& rhs)
