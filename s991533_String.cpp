@@ -26,7 +26,7 @@ String::String()
 {
     size = 0;
     capacity = 10;
-    sPtr = NULL;
+    sPtr = new char[capacity];
 }
 
 String::String(const String &str)
