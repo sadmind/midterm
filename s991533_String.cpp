@@ -41,7 +41,7 @@ String::String(const String &str)
 
 String::String(const String& str, size_t pos, size_t len)
 {
-    size = (len == -1) ? str.size - pos : len;
+    size = (len == -1 || pos + len > str.size) ? str.size - pos : len;
     capacity = (size > 10) ? size : 10;
     sPtr = new char[capacity];
     for (size_t i = 0; i < size; i ++) {
