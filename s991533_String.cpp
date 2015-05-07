@@ -51,7 +51,7 @@ String::String(const String& str, size_t pos, size_t len)
 
 String::String(const char *s)
 {
-	size = strlen(s);
+    size = strlen(s);
     capacity = (size > 10) ? size : 10;
     sPtr = new char[capacity];
     for (size_t i = 0; i < size; i ++) {
@@ -61,15 +61,15 @@ String::String(const char *s)
 
 String::~String()
 {
-	delete[] sPtr;
+    delete[] sPtr;
 }
 
 String& String::operator = (const String& str)
 {
-	size = str.size;
+    size = str.size;
     capacity = str.capacity;
     delete[] sPtr;
-	sPtr = new char[capacity];
+    sPtr = new char[capacity];
     for (size_t i = 0; i < size; i ++) {
         sPtr[i] = str.sPtr[i];
     }
@@ -78,8 +78,8 @@ String& String::operator = (const String& str)
 
 String& String::operator = (const char* s)
 {
-	String temp(s);
-	*this = temp;
+    String temp(s);
+    *this = temp;
     return *this;
 }
 
@@ -95,7 +95,7 @@ char* String::end()
 
 void String::resize(size_t n)
 {
-	this->resize(n, '\0');
+    this->resize(n, '\0');
 }
 
 void String::resize( size_t n, char c )
@@ -105,11 +105,11 @@ void String::resize( size_t n, char c )
     }
     String temp(*this);
     delete[] sPtr;
-	capacity = n;
-	sPtr = new char[capacity];
+    capacity = n;
+    sPtr = new char[capacity];
     if (n < size) {
         for (size_t i = 0; i < n; i ++) {
-			sPtr[i] = temp.sPtr[i];
+            sPtr[i] = temp.sPtr[i];
         }
     } else {
         for (size_t i = 0; i < size; i ++) {
@@ -159,7 +159,7 @@ void String::reserve(size_t n)
         for (size_t i = 0; i < size; i++) {
             sPtr[i] = temp.sPtr[i];
         }
-		capacity = n;
+        capacity = n;
     }
 }
 
@@ -168,8 +168,8 @@ void String::shrink_to_fit()
     if (capacity > size) {
         String temp(*this);
         delete [] sPtr;
-		capacity = size;
-		sPtr = new char[capacity];
+        capacity = size;
+        sPtr = new char[capacity];
         for (size_t i = 0; i < size; i++) {
             sPtr[i] = temp.sPtr[i];
         }
@@ -199,7 +199,7 @@ char& String::front()
 void String::push_back(char c)
 {
     if (capacity - size < 1) {
-		this->reserve(size + 1);
+        this->reserve(size + 1);
     }
     sPtr[size++] = c;
 }
@@ -212,46 +212,46 @@ void String::pop_back()
 String& String::append(const String &str)
 {
     size_t oldSize = size;
-	this->reserve(size + str.size);
-	size += str.size;
+    this->reserve(size + str.size);
+    size += str.size;
     for (size_t i = oldSize; i < size; i ++) {
-		sPtr[i] = str.sPtr[i - oldSize];
+        sPtr[i] = str.sPtr[i - oldSize];
     }
     return *this;
 }
 
 String& String::substr(size_t pos , size_t len) const
 {
-	String * temp = new String(*this, pos, len);
+    String * temp = new String(*this, pos, len);
     return *temp;
 }
 
 String& String::insert(size_t pos, const String &str)
 {
     String front(*this, 0, pos);
-	String back(*this, pos);
-	this->reserve(size + str.size);
-	this->clear();
-	this->append(front);
-	this->append(str);
+    String back(*this, pos);
+    this->reserve(size + str.size);
+    this->clear();
+    this->append(front);
+    this->append(str);
     this->append(back);
     return *this;
 }
 
 String& String::insert(size_t pos, const String &str, size_t subpos, size_t sublen)
 {
-	String temp(str, subpos, sublen);
-	this->insert(pos, temp);
-	return *this;
+    String temp(str, subpos, sublen);
+    this->insert(pos, temp);
+    return *this;
 }
 
 String& String::erase(size_t subpos, size_t sublen)
 {
     String front(*this, 0, subpos);
     String back(*this, subpos+sublen);
-	this->clear();
-	this->append(front);
-	this->append(back);
+    this->clear();
+    this->append(front);
+    this->append(back);
     return *this;
 }
 
@@ -259,7 +259,7 @@ size_t String::find(const String &str, size_t pos) const
 {
     for (size_t i = pos; i < size - str.size; i ++) {
         for (size_t j = i; j <= i + str.size; j ++) {
-			if (j == i + str.size) {
+            if (j == i + str.size) {
                 return i;
             }
             if (sPtr[j] != str.sPtr[j - i]) {
@@ -299,8 +299,8 @@ String String::operator + (const String& rhs)
 
 String String::operator + (const char* rhs)
 {
-	String temp(*this);
-	String temp2(rhs);
-	temp.append(temp2);
+    String temp(*this);
+    String temp2(rhs);
+    temp.append(temp2);
     return temp;
 }
